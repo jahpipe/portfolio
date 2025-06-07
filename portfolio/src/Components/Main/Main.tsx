@@ -73,9 +73,7 @@ const Main = () => {
         >
           Download CV
         </a>
-        <section>
-            <h1>hellow</h1>
-        </section>
+    
       </div>
     </section>
     
