@@ -60,10 +60,7 @@ const Contact = () => (
 
         <div>
           <label htmlFor="message" className="block text-sm mb-1 text-gray-200">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
+          <textarea rows={5} 
             placeholder="Your message..."
             className="w-full px-4 py-2 bg-gray-700 text-white rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500"
             required

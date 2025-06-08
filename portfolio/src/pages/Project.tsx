@@ -20,7 +20,7 @@ const projects = [
 ];
 
 const Project = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   return (
     <section id="project" className="min-h-screen p-8 bg-gray-700 text-white">
@@ -53,7 +53,6 @@ const Project = () => {
         ))}
       </div>
 
-      {/* Modal for enlarged image */}
       <AnimatePresence>
         {selectedImage && (
           <motion.div
@@ -70,7 +69,7 @@ const Project = () => {
               animate={{ scale: 1 }}
               exit={{ scale: 0.8 }}
               className="max-w-3xl max-h-[80vh] rounded-lg shadow-2xl"
-              onClick={(e) => e.stopPropagation()} // Prevent click from closing when clicking image
+              onClick={(e) => e.stopPropagation()}
             />
           </motion.div>
         )}

@@ -1,14 +1,16 @@
-import Header from "../Components/Header/Header"
-import Main from "../Components/Main/Main"
+import type { ReactNode } from "react";
+import Header from '../Components/Header/Header'
+type RootlayoutProps = {
+  children?: ReactNode; // make it optional
+};
 
-const Rootlayout = () => {
+const Rootlayout = ({ children }: RootlayoutProps) => {
   return (
     <div>
-        <div>
-            <Header/>
-        </div>
+      <Header/>
+      <main>{children}</main>
     </div>
-  )
-}
+  );
+};
 
-export default Rootlayout
+export default Rootlayout;

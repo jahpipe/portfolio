@@ -1,4 +1,4 @@
-import { div } from "framer-motion/client";
+
 import { useState, useEffect } from "react";
 
 const phrases = [
@@ -15,7 +15,7 @@ const TypingAnimation = () => {
 
   useEffect(() => {
     const currentPhrase = phrases[phraseIndex];
-    let timer;
+    let timer: ReturnType<typeof setTimeout>;
 
     if (!isDeleting && text === currentPhrase) {
       timer = setTimeout(() => setIsDeleting(true), 1500);
@@ -46,11 +46,10 @@ const TypingAnimation = () => {
 
 const Main = () => {
   return (
-    
     <section
       id="main"
       className="flex flex-col md:flex-row-reverse items-center justify-center gap-12 min-h-screen px-4 md:px-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"
-     >
+    >
       <div className="flex-shrink-0">
         <img
           src="/jovanie.png"
@@ -73,10 +72,8 @@ const Main = () => {
         >
           Download CV
         </a>
-    
       </div>
     </section>
-    
   );
 };
 
