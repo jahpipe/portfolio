@@ -55,27 +55,28 @@ const info = [
     ),
   },
   {
-    title: "Technical Stack & Tools",
-    icon: <FaTools className="text-white text-xl" />,
-    color: "from-purple-500 to-pink-500",
-    content: (
-      <div className="w-full flex justify-center">
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 text-3xl text-gray-300">
-          <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
-          <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
-          <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
-          <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
-          <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
-          <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
-          <FaNode className="text-green-400 hover:scale-110 transition-transform" />
-          <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
-          <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
-          <FaGithub className="text-white hover:scale-110 transition-transform" />
-          <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
-        </div>
+  title: "Technical Stack & Tools",
+  icon: <FaTools className="text-white text-xl" />,
+  color: "from-purple-500 to-pink-500",
+  content: (
+    <div className="w-full flex justify-center">
+      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 text-5xl text-gray-300">
+        <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
+        <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
+        <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
+        <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
+        <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
+        <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
+        <FaNode className="text-green-400 hover:scale-110 transition-transform" />
+        <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
+        <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
+        <FaGithub className="text-white hover:scale-110 transition-transform" />
+        <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
       </div>
-    ),
-  },
+    </div>
+  ),
+},
+
 ];
 
 
