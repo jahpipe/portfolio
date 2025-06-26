@@ -49,10 +49,10 @@ const Main = () => {
     <section
       id="main"
       className="flex flex-col md:flex-row-reverse items-center justify-center gap-12 min-h-screen px-4 md:px-20 bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900"
-    >
+      >
       <div className="flex-shrink-0">
         <img
-          src="/jovanie.png"
+          src="jovanie.png"
           alt="Profile"
           className="w-[300px] h-[300px] object-cover rounded-full border-4 border-indigo-500 shadow-2xl"
         />
@@ -66,7 +66,7 @@ const Main = () => {
         <TypingAnimation />
 
         <a
-          href="/Jovanie_Moreno_CV.pdf"
+          href="/portfolio/Resume.pdf"
           download
           className="inline-block mt-6 px-6 py-3 bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 rounded-lg font-semibold shadow-lg text-white"
         >
