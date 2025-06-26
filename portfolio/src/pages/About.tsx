@@ -50,7 +50,7 @@ const info = [
           </span>{" "}
           at Baybay City Senior High School (2017–2018).
         </p>
-        <p>Learned foundational IT skills and career basics.</p>
+      
       </>
     ),
   },
