@@ -1,6 +1,5 @@
 import {
   FaGraduationCap,
-  FaCode,
   FaReact,
   FaNode,
   FaGithub,
