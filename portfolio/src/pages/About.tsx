@@ -25,14 +25,14 @@ const info = [
     content: (
       <>
         <p>
-          Currently pursuing a{" "}
+          Graduated with a{" "}
           <span className="font-semibold text-white">
             Bachelor of Science in Information Technology
           </span>{" "}
-          at Franciscan College of the Immaculate Conception (2021–2025).
+          from Franciscan College of the Immaculate Conception (2021–2025).
         </p>
         <p>
-          Focused on full-stack development, networking, and databases.
+          Focused on full-stack development, networking.
         </p>
       </>
     ),
@@ -48,36 +48,37 @@ const info = [
           <span className="font-semibold text-white">
             TVL (Technical Vocational and Livelihood) Track
           </span>{" "}
-          at Baybay City Senior High School (2018–2019).
+          at Baybay City Senior High School (2017–2018).
         </p>
         <p>Learned foundational IT skills and career basics.</p>
       </>
     ),
   },
   {
-  title: "Technical Stack & Tools",
-  icon: <FaTools className="text-white text-xl" />,
-  color: "from-purple-500 to-pink-500",
-  content: (
-    <div className="w-full flex justify-center">
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 text-3xl text-gray-300">
-        <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
-        <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
-        <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
-        <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
-        <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
-        <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
-        <FaNode className="text-green-400 hover:scale-110 transition-transform" />
-        <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
-        <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
-        <FaGithub className="text-white hover:scale-110 transition-transform" />
-        <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
+    title: "Technical Stack & Tools",
+    icon: <FaTools className="text-white text-xl" />,
+    color: "from-purple-500 to-pink-500",
+    content: (
+      <div className="w-full flex justify-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6 text-3xl text-gray-300">
+          <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
+          <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
+          <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
+          <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
+          <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
+          <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
+          <FaNode className="text-green-400 hover:scale-110 transition-transform" />
+          <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
+          <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
+          <FaGithub className="text-white hover:scale-110 transition-transform" />
+          <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
+        </div>
       </div>
-    </div>
-  ),
-}
-
+    ),
+  },
 ];
+
+
 
 const cardVariant = {
   hidden: { opacity: 0, y: 30 },
