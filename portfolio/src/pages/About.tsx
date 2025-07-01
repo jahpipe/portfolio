@@ -14,6 +14,7 @@ import {
   SiPostman,
   SiMongodb,
   SiMysql,
+  SiNextdotjs,
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -31,9 +32,7 @@ const info = [
           </span>{" "}
           from Franciscan College of the Immaculate Conception (2021–2025).
         </p>
-        <p>
-          Focused on full-stack development, networking.
-        </p>
+        <p>Focused on full-stack development, networking.</p>
       </>
     ),
   },
@@ -50,36 +49,57 @@ const info = [
           </span>{" "}
           at Baybay City Senior High School (2017–2018).
         </p>
-      
       </>
     ),
   },
   {
-  title: "Technical Stack & Tools",
-  icon: <FaTools className="text-white text-xl" />,
-  color: "from-purple-500 to-pink-500",
-  content: (
-    <div className="w-full flex justify-center">
-      <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 text-5xl text-gray-300">
-        <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
-        <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
-        <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
-        <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
-        <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
-        <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
-        <FaNode className="text-green-400 hover:scale-110 transition-transform" />
-        <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
-        <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
-        <FaGithub className="text-white hover:scale-110 transition-transform" />
-        <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
+    title: "Technical Stack & Tools",
+    icon: <FaTools className="text-white text-xl" />,
+    color: "from-purple-500 to-pink-500",
+    content: (
+      <div className="w-full flex justify-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-8 text-5xl text-gray-300">
+          <div title="HTML5">
+            <FaHtml5 className="text-orange-500 hover:scale-110 transition-transform" />
+          </div>
+          <div title="CSS3">
+            <FaCss3Alt className="text-blue-500 hover:scale-110 transition-transform" />
+          </div>
+          <div title="JavaScript">
+            <FaJsSquare className="text-yellow-300 hover:scale-110 transition-transform" />
+          </div>
+          <div title="TypeScript">
+            <SiTypescript className="text-blue-400 hover:scale-110 transition-transform" />
+          </div>
+          <div title="React">
+            <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
+          </div>
+          <div title="Next.js">
+            <SiNextdotjs className="text-white hover:scale-110 transition-transform" />
+          </div>
+          <div title="Tailwind CSS">
+            <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />
+          </div>
+          <div title="Node.js">
+            <FaNode className="text-green-400 hover:scale-110 transition-transform" />
+          </div>
+          <div title="MongoDB">
+            <SiMongodb className="text-green-500 hover:scale-110 transition-transform" />
+          </div>
+          <div title="MySQL">
+            <SiMysql className="text-yellow-400 hover:scale-110 transition-transform" />
+          </div>
+          <div title="GitHub">
+            <FaGithub className="text-white hover:scale-110 transition-transform" />
+          </div>
+          <div title="Postman">
+            <SiPostman className="text-orange-400 hover:scale-110 transition-transform" />
+          </div>
+        </div>
       </div>
-    </div>
-  ),
-},
-
+    ),
+  },
 ];
-
-
 
 const cardVariant = {
   hidden: { opacity: 0, y: 30 },
