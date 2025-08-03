@@ -14,7 +14,7 @@ import {
   SiPostman,
   SiMongodb,
   SiMysql,
-  SiNextdotjs,
+ 
 } from "react-icons/si";
 import { motion } from "framer-motion";
 
@@ -73,9 +73,6 @@ const info = [
           </div>
           <div title="React">
             <FaReact className="text-cyan-300 hover:scale-110 transition-transform" />
-          </div>
-          <div title="Next.js">
-            <SiNextdotjs className="text-white hover:scale-110 transition-transform" />
           </div>
           <div title="Tailwind CSS">
             <SiTailwindcss className="text-cyan-400 hover:scale-110 transition-transform" />

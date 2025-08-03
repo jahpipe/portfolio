@@ -1,71 +1,101 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { Github, ExternalLink } from "lucide-react";
 
-const projects = [
+type Project = {
+  title: string;
+  description: string;
+  image: string;
+  live?: string;
+  github?: string;
+  tags?: string[];
+};
+
+const projects: Project[] = [
   {
-    title: "Account Management & Inventory",
+    title: "BurgerBuddy Auth System",
     description:
-      "An inventory system with user roles, authentication, and real-time stock updates.",
+      "Secure fullstack authentication system using JWT, HTTP-only cookies, session control, and RBAC.",
+    image: "burger.png",
+    github: "https://github.com/jahpipe/Account-Authentication",
+    live: "https://authentacation-login.vercel.app/",
+    tags: ["React", "JWT", "MongoDB", "Node.js"],
+  },
+  {
+    title: "Account Inventory",
+    description:
+      "Inventory system with analytics dashboard, protected routes, and role-based access.",
     image: "fishbroker.png",
+    live: "https://account-inventory.vercel.app",
+    tags: ["React", "Express", "MongoDB"],
   },
   {
     title: "Leave Management System",
     description:
-      "Built with Node.js and React, this app allows employees to apply for leave and managers to approve or reject.",
+      "Employees can submit leave requests, and managers can approve/reject them. Session-based auth.",
     image: "lms.png",
+    live: "https://leave-management.vercel.app",
+    tags: ["React", "Express", "MongoDB"],
   },
   {
     title: "Coffee Store",
     description:
-      "Responsive online store with product listings and cart. Styled with Tailwind, backend built using Express.",
+      "Responsive ecommerce site with cart, filters, and checkout system.",
     image: "coffe.png",
+    live: "https://coffee-store.vercel.app",
+    tags: ["React", "Tailwind", "Express"],
   },
 ];
 
-const Project = () => {
-  const [selected, setSelected] = useState<null | typeof projects[0]>(null);
+export default function ProjectSection() {
+  const [selected, setSelected] = useState<null | Project>(null);
 
   return (
     <section
       id="project"
-      className="min-h-screen py-20 px-6 sm:px-10 bg-gray-950 text-white"
+      className="min-h-screen py-20 px-6 sm:px-10 bg-gradient-to-br from-gray-900 to-gray-950 text-white"
     >
-      <h2 className="text-4xl font-extrabold mb-16 text-center text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-500">
-        Projects
+      <h2 className="text-4xl font-bold mb-16 text-center text-cyan-400">
+        My Projects
       </h2>
 
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
-        {projects.map((proj, index) => (
+        {projects.map((proj, i) => (
           <motion.div
-            key={index}
-            initial={{ opacity: 0, y: 40 }}
+            key={i}
+            initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: index * 0.1 }}
+            transition={{ duration: 0.5, delay: i * 0.1 }}
             viewport={{ once: true }}
-            className="bg-gray-900/70 border border-cyan-700 rounded-xl overflow-hidden shadow-lg hover:shadow-cyan-500/20 group transition-all duration-300 cursor-pointer"
+            className="bg-white/5 border border-cyan-800 backdrop-blur-sm rounded-xl overflow-hidden shadow-md hover:shadow-cyan-500/30 group cursor-pointer transition-all"
             onClick={() => setSelected(proj)}
           >
-            <div className="overflow-hidden">
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-            </div>
+            <img
+              src={proj.image}
+              alt={proj.title}
+              className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+            />
             <div className="p-4">
               <h3 className="text-xl font-bold text-cyan-300">{proj.title}</h3>
               <p className="text-sm text-gray-400 mt-2 line-clamp-3">
                 {proj.description}
               </p>
-              <span className="inline-block mt-4 text-sm text-pink-500 hover:underline">
-                Click to view
-              </span>
+              <div className="flex gap-2 flex-wrap mt-3">
+                {proj.tags?.map((tag) => (
+                  <span
+                    key={tag}
+                    className="px-2 py-0.5 text-xs bg-cyan-700 text-white rounded-full"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
             </div>
           </motion.div>
         ))}
       </div>
-       
-      {/* Modal */}
+
+      {/* MODAL */}
       <AnimatePresence>
         {selected && (
           <motion.div
@@ -91,9 +121,33 @@ const Project = () => {
                 {selected.title}
               </h3>
               <p className="text-gray-300">{selected.description}</p>
+
+              <div className="flex flex-wrap gap-3 mt-4">
+                {selected.live && (
+                  <a
+                    href={selected.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-4 py-2 bg-cyan-600 hover:bg-cyan-700 text-white rounded-md transition"
+                  >
+                    <ExternalLink size={16} /> Live Demo
+                  </a>
+                )}
+                {selected.github && (
+                  <a
+                    href={selected.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-4 py-2 bg-gray-800 hover:bg-gray-700 text-white rounded-md transition"
+                  >
+                    <Github size={16} /> GitHub Repo
+                  </a>
+                )}
+              </div>
+
               <button
                 onClick={() => setSelected(null)}
-                className="mt-4 px-4 py-2 bg-pink-600 hover:bg-pink-700 rounded-md text-white"
+                className="mt-6 px-4 py-2 bg-pink-600 hover:bg-pink-700 rounded-md text-white"
               >
                 Close
               </button>
@@ -103,6 +157,4 @@ const Project = () => {
       </AnimatePresence>
     </section>
   );
-};
-
-export default Project;
+}
