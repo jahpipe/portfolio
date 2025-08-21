@@ -9,6 +9,7 @@ type Project = {
   live?: string;
   github?: string;
   tags?: string[];
+  video?: string; // 🔥 added video support
 };
 
 const projects: Project[] = [
@@ -29,14 +30,16 @@ const projects: Project[] = [
     live: "https://account-inventory.vercel.app",
     tags: ["React", "Express", "MongoDB"],
   },
-  {
-    title: "Leave Management System",
-    description:
-      "Employees can submit leave requests, and managers can approve/reject them. Session-based auth.",
-    image: "lms.png",
-    live: "https://leave-management.vercel.app",
-    tags: ["React", "Express", "MongoDB"],
-  },
+{
+  title: "Leave Management System",
+  description:
+    "A Leave Management System (LMS) for teaching and non-teaching staff. Employees can apply for different types of leave, view their available leave balances, and track the status of their applications. Admin users can update leave balances, and approve or reject leave requests. The system uses secure password hashing for authentication.",
+  image: "lms.png",
+  live: "https://leave-management.vercel.app",
+  tags: ["React", "Node.js", "Express", "MySQL", "Tailwind", "BCrypt"],
+  video: "/portfolio/public/0821-1.mp4"
+}
+,
   {
     title: "Coffee Store",
     description:
@@ -46,6 +49,7 @@ const projects: Project[] = [
     tags: ["React", "Tailwind", "Express"],
   },
 ];
+
 
 export default function ProjectSection() {
   const [selected, setSelected] = useState<null | Project>(null);
@@ -59,6 +63,7 @@ export default function ProjectSection() {
         My Projects
       </h2>
 
+      {/* Project Cards */}
       <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
         {projects.map((proj, i) => (
           <motion.div
@@ -112,11 +117,25 @@ export default function ProjectSection() {
               onClick={(e) => e.stopPropagation()}
               className="bg-gray-900 p-6 rounded-xl max-w-xl w-full shadow-2xl space-y-4"
             >
-              <img
-                src={selected.image}
-                alt={selected.title}
-                className="w-full h-60 object-cover rounded-md"
-              />
+              {/* Show video if available, otherwise show image */}
+              {selected.video ? (
+                <video
+                  src={selected.video}
+                  controls
+                  autoPlay
+                  muted   // ✅ important for autoplay to work
+                  loop
+                  playsInline
+                  className="w-full h-60 object-cover rounded-md"
+                />
+              ) : (
+                <img
+                  src={selected.image}
+                  alt={selected.title}
+                  className="w-full h-60 object-cover rounded-md"
+                />
+              )}
+
               <h3 className="text-2xl font-bold text-cyan-400">
                 {selected.title}
               </h3>
