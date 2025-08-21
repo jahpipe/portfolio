@@ -37,7 +37,7 @@ const projects: Project[] = [
   image: "lms.png",
   live: "https://leave-management.vercel.app",
   tags: ["React", "Node.js", "Express", "MySQL", "Tailwind", "BCrypt"],
-  video: "/portfolio/public/0821-1.mp4"
+  video: "/0821-1.mp4"
 }
 ,
   {
